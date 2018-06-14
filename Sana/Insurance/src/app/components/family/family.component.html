@@ -1,0 +1,28 @@
+<div class="container mx-auto">
+
+  <h2>Guest and Associates</h2>
+
+  <div class="box">
+    <label for="sel1">Primary Guest: </label>
+    <select class="form-control" id="sel1">
+      <option>1</option>
+    </select>
+  </div>
+
+  <div class="box">
+    <label for="sel2">Spouse: {{selectedSpouse.id}} </label>
+    <select class="form-control" id="sel2" [(ngModel)]= "selectedSpouse">
+      <option *ngFor="let numSpouse of spouseOptions" [ngValue]="numSpouse">{{numSpouse.text}}</option>
+    </select>
+  </div>
+
+  <div class="box">
+    <label for="sel3">Children: {{selectedChild.id}}</label>
+    <select class="form-control" id="sel3" [(ngModel)]= "selectedChild" >
+      <option *ngFor="let numChild of childrenOptions" [ngValue]="numChild">{{numChild.text}}</option>
+    </select>
+  </div>
+  <br>
+  <button class="btn" (click)="doStuff()">Enter Health Info ></button>
+
+</div>

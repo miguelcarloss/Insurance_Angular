@@ -1,0 +1,13 @@
+.box {
+    height: 500px;
+  }
+
+.innerbox {
+    height: 250px;
+    margin: auto;
+}
+.centeredbox {
+    padding: 100px 150px;
+    text-align: center;
+    
+}

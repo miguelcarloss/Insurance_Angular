@@ -26,9 +26,7 @@ export class FamilyComponent implements OnInit {
   }
 
   doStuff(){
-    console.log("primary: " + 1 );
-    console.log("spouse index: " + this.selectedSpouse.id);
-    console.log("child index: " + this.selectedChild.id);
+    console.log("do stuff here");
   }
 
 }

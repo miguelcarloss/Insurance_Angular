@@ -2,7 +2,7 @@ export class User{
     id: number;
     fname: String;
     lname: String;
-    uname: String;
+    //uname: String;
     email: String;
     zipcode: number;
     spouse: boolean;

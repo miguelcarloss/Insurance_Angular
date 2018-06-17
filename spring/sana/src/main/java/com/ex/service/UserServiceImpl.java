@@ -42,9 +42,28 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public User update(User u) {
-		User oldUser = findById(u.getId());
+		User oldUser = urepo.findOne(u.getId());
 		if(oldUser == null) return null;
-		else oldUser = u;
+		else{
+			oldUser.setId(u.getId());
+			oldUser.setFirstname(u.getFirstname());
+			oldUser.setLastname(u.getLastname());	
+			oldUser.setEmail(u.getEmail());
+			oldUser.setPasscode(u.getPasscode());
+			oldUser.setZipcode(u.getZipcode());
+			oldUser.setSpouse(u.getSpouse());
+			oldUser.setChildren(u.getChildren());
+			oldUser.setAge(u.getAge());
+			oldUser.setGender(u.getGender());
+			oldUser.setSmoker(u.getSmoker());
+			oldUser.setHbp(u.getHbp());
+			oldUser.setDiabetes(u.getDiabetes());
+			oldUser.setSurgery(u.getSurgery());
+			oldUser.setAllergies(u.getAllergies());
+			oldUser.setPlan_mult(u.getPlan_mult());
+			oldUser.setPlan_bonus(u.getPlan_bonus());
+			oldUser.setQuote_total(u.getQuote_total());
+		}
 		return u;
 	}
 	

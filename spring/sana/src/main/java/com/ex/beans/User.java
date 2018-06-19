@@ -15,6 +15,15 @@ import org.springframework.stereotype.Component;
 @Table(name="users")
 public class User {
 	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", email=" + email
+				+ ", passcode=" + password + ", zipcode=" + zipcode + ", spouse=" + spouse + ", children=" + children
+				+ ", age=" + age + ", gender=" + gender + ", smoker=" + smoker + ", hbp=" + hbp + ", diabetes="
+				+ diabetes + ", surgery=" + surgery + ", allergy=" + allergy + ", plan_mult=" + plan_mult
+				+ ", plan_bonus=" + plan_bonus + ", quote_total=" + quote_total + "]";
+	}
+
 	@Id
 	@Column(name="user_id")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="user")
@@ -31,7 +40,7 @@ public class User {
 	private String email;
 	
 	@Column(name="passcode")
-	private String passcode;
+	private String password;
 	
 	@Column(name="zipcode")
 	private String zipcode;
@@ -61,7 +70,7 @@ public class User {
 	private int surgery;
 	
 	@Column(name="allergies")
-	private int allergies;
+	private int allergy;
 	
 	@Column(name="plan_mult")
 	private double plan_mult;
@@ -74,22 +83,28 @@ public class User {
 	
 	public User() {super();}
 
-	public User(String firstname, String lastname, String email, String passcode) {
+	public User(String email, String password) {
+		super();
+		this.email = email;
+		this.password = password;
+	}
+	
+	public User(String firstname, String lastname, String email, String password) {
 		super();
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
-		this.passcode = passcode;
+		this.password = password;
 	}
 
-	public User(String firstname, String lastname, String email, String passcode, String zipcode, int spouse,
+	public User(String firstname, String lastname, String email, String password, String zipcode, int spouse,
 			int children, String age, String gender, int smoker, int hbp, int diabetes, int surgery, int allergies,
 			double plan_mult, double plan_bonus, double quote_total) {
 		super();
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
-		this.passcode = passcode;
+		this.password = password;
 		this.zipcode = zipcode;
 		this.spouse = spouse;
 		this.children = children;
@@ -99,7 +114,7 @@ public class User {
 		this.hbp = hbp;
 		this.diabetes = diabetes;
 		this.surgery = surgery;
-		this.allergies = allergies;
+		this.allergy = allergy;
 		this.plan_mult = plan_mult;
 		this.plan_bonus = plan_bonus;
 		this.quote_total = quote_total;
@@ -137,12 +152,12 @@ public class User {
 		this.email = email;
 	}
 
-	public String getPasscode() {
-		return passcode;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPasscode(String passcode) {
-		this.passcode = passcode;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getZipcode() {
@@ -218,11 +233,11 @@ public class User {
 	}
 
 	public int getAllergies() {
-		return allergies;
+		return allergy;
 	}
 
 	public void setAllergies(int allergies) {
-		this.allergies = allergies;
+		this.allergy = allergies;
 	}
 
 	public double getPlan_mult() {
@@ -248,7 +263,4 @@ public class User {
 	public void setQuote_total(double quote_total) {
 		this.quote_total = quote_total;
 	}
-	
-	
-	
 }

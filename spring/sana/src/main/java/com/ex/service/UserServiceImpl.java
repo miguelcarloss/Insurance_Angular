@@ -49,7 +49,7 @@ public class UserServiceImpl implements UserService{
 			oldUser.setFirstname(u.getFirstname());
 			oldUser.setLastname(u.getLastname());	
 			oldUser.setEmail(u.getEmail());
-			oldUser.setPasscode(u.getPasscode());
+			oldUser.setPassword(u.getPassword());
 			oldUser.setZipcode(u.getZipcode());
 			oldUser.setSpouse(u.getSpouse());
 			oldUser.setChildren(u.getChildren());
@@ -64,10 +64,20 @@ public class UserServiceImpl implements UserService{
 			oldUser.setPlan_bonus(u.getPlan_bonus());
 			oldUser.setQuote_total(u.getQuote_total());
 		}
-		return u;
+		return oldUser;
 	}
-	
-	
-	
 
+	@Override
+	public User attemptLogin(User user) {
+		
+		User check = urepo.findByEmail(user.getEmail());
+		System.out.println("=================================");
+		System.out.println("Given User " + user.getEmail() + " = " + user.getPassword());
+		System.out.println("DB User " + user.getEmail() + " = " + user.getPassword());
+		System.out.println("=================================");
+		if(check != null && check.getPassword().equals(user.getPassword())) {
+			return check;
+		}
+		return null;
+	}
 }

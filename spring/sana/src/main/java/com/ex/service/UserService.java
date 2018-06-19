@@ -10,4 +10,5 @@ public interface UserService {
 	User findByEmail(String email);
 	User add(User u);
 	User update(User u);
+	User attemptLogin(User user);
 }

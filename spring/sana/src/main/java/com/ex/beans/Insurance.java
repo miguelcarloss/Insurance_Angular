@@ -19,55 +19,55 @@ public class Insurance {
 	@Column(name="insurance_id")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="insurance")
 	@SequenceGenerator(name="insurance", sequenceName="insur_seq", allocationSize=1)
-	private int insurance_id;
+	private int id;
 	
 	@Column(name="area_city")
-	private int area_city;
+	private double area_city;
 	
 	@Column(name="area_suburban")
-	private int area_suburban;
+	private double area_suburban;
 	
 	@Column(name="area_rural")
-	private int area_rural;
+	private double area_rural;
 	
 	@Column(name="gender_male")
-	private int gender_male;
+	private double gender_male;
 	
 	@Column(name="gender_female")
-	private int gender_female;
+	private double gender_female;
 	
 	@Column(name="smoker")
-	private int smoker;
+	private double smoker;
 	
 	@Column(name="diabetic")
-	private int diabetic;
+	private double diabetic;
 	
 	@Column(name="hbp")
-	private int hbp;
+	private double hbp;
 	
 	@Column(name="previous_surgery")
-	private int surgery;
+	private double surgery;
 	
 	@Column(name="allergy")
-	private int allergy;
+	private double allergy;
 	
 	@Column(name="spouse")
-	private int spouse;
+	private double spouse;
 	
 	@Column(name="per_child")
-	private int per_child;
+	private double per_child;
 	
 	@Column(name="age_0_17")
-	private int age_0_17;
+	private double age_0_17;
 	
 	@Column(name="age_18_20")
-	private int age_18_20;
+	private double age_18_20;
 	
 	@Column(name="age_21_40")
-	private int age_21_40;
+	private double age_21_40;
 	
 	@Column(name="age_40_plus")
-	private int age_40_plus;
+	private double age_40_plus;
 	
 	@Column(name="multiplier_bonus_long_term")
 	private double long_term;
@@ -86,9 +86,9 @@ public class Insurance {
 
 	public Insurance() {super();}
 
-	public Insurance(int area_city, int area_suburban, int area_rural, int gender_male, int gender_female, int smoker,
-			int diabetic, int hbp, int surgery, int allergy, int spouse, int per_child, int age_0_17, int age_18_20,
-			int age_21_40, int age_40_plus, double long_term, double short_term, double platinum, double gold,
+	public Insurance(double area_city, double area_suburban, double area_rural, double gender_male, double gender_female, double smoker,
+			double diabetic, double hbp, double surgery, double allergy, double spouse, double per_child, double age_0_17, double age_18_20,
+			double age_21_40, double age_40_plus, double long_term, double short_term, double platinum, double gold,
 			double medicare) {
 		super();
 		this.area_city = area_city;
@@ -114,131 +114,131 @@ public class Insurance {
 		this.medicare = medicare;
 	}
 
-	public int getArea_city() {
+	public double getArea_city() {
 		return area_city;
 	}
 
-	public void setArea_city(int area_city) {
+	public void setArea_city(double area_city) {
 		this.area_city = area_city;
 	}
 
-	public int getArea_suburban() {
+	public double getArea_suburban() {
 		return area_suburban;
 	}
 
-	public void setArea_suburban(int area_suburban) {
+	public void setArea_suburban(double area_suburban) {
 		this.area_suburban = area_suburban;
 	}
 
-	public int getArea_rural() {
+	public double getArea_rural() {
 		return area_rural;
 	}
 
-	public void setArea_rural(int area_rural) {
+	public void setArea_rural(double area_rural) {
 		this.area_rural = area_rural;
 	}
 
-	public int getGender_male() {
+	public double getGender_male() {
 		return gender_male;
 	}
 
-	public void setGender_male(int gender_male) {
+	public void setGender_male(double gender_male) {
 		this.gender_male = gender_male;
 	}
 
-	public int getGender_female() {
+	public double getGender_female() {
 		return gender_female;
 	}
 
-	public void setGender_female(int gender_female) {
+	public void setGender_female(double gender_female) {
 		this.gender_female = gender_female;
 	}
 
-	public int getSmoker() {
+	public double getSmoker() {
 		return smoker;
 	}
 
-	public void setSmoker(int smoker) {
+	public void setSmoker(double smoker) {
 		this.smoker = smoker;
 	}
 
-	public int getDiabetic() {
+	public double getDiabetic() {
 		return diabetic;
 	}
 
-	public void setDiabetic(int diabetic) {
+	public void setDiabetic(double diabetic) {
 		this.diabetic = diabetic;
 	}
 
-	public int getHbp() {
+	public double getHbp() {
 		return hbp;
 	}
 
-	public void setHbp(int hbp) {
+	public void setHbp(double hbp) {
 		this.hbp = hbp;
 	}
 
-	public int getSurgery() {
+	public double getSurgery() {
 		return surgery;
 	}
 
-	public void setSurgery(int surgery) {
+	public void setSurgery(double surgery) {
 		this.surgery = surgery;
 	}
 
-	public int getAllergy() {
+	public double getAllergy() {
 		return allergy;
 	}
 
-	public void setAllergy(int allergy) {
+	public void setAllergy(double allergy) {
 		this.allergy = allergy;
 	}
 
-	public int getSpouse() {
+	public double getSpouse() {
 		return spouse;
 	}
 
-	public void setSpouse(int spouse) {
+	public void setSpouse(double spouse) {
 		this.spouse = spouse;
 	}
 
-	public int getPer_child() {
+	public double getPer_child() {
 		return per_child;
 	}
 
-	public void setPer_child(int per_child) {
+	public void setPer_child(double per_child) {
 		this.per_child = per_child;
 	}
 
-	public int getAge_0_17() {
+	public double getAge_0_17() {
 		return age_0_17;
 	}
 
-	public void setAge_0_17(int age_0_17) {
+	public void setAge_0_17(double age_0_17) {
 		this.age_0_17 = age_0_17;
 	}
 
-	public int getAge_18_20() {
+	public double getAge_18_20() {
 		return age_18_20;
 	}
 
-	public void setAge_18_20(int age_18_20) {
+	public void setAge_18_20(double age_18_20) {
 		this.age_18_20 = age_18_20;
 	}
 
-	public int getAge_21_40() {
+	public double getAge_21_40() {
 		return age_21_40;
 	}
 
-	public void setAge_21_40(int age_21_40) {
+	public void setAge_21_40(double age_21_40) {
 		this.age_21_40 = age_21_40;
 	}
 
-	public int getAge_40_plus() {
+	public double getAge_40_plus() {
 		return age_40_plus;
 	}
 
-	public void setAge_40_plus(int age_40_plus) {
+	public void setAge_40_plus(double age_40_plus) {
 		this.age_40_plus = age_40_plus;
 	}
 
@@ -281,10 +281,13 @@ public class Insurance {
 	public void setMedicare(double medicare) {
 		this.medicare = medicare;
 	}
-	
-	
-	
-	
-	
-	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 }

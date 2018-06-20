@@ -120,10 +120,10 @@ public class UserServiceImpl implements UserService{
 		}
 		
 		switch(user.getGender().toLowerCase()) {
-		case "gender_male":
+		case "male":
 			quote += ins.getGender_male();
 			break;
-		case "gender_femail":
+		case "female":
 			quote += ins.getGender_female();
 			break;
 		}
